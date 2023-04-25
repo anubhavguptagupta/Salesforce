@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Check_Account_Admin</fullName>
+    <active>true</active>
+    <errorConditionFormula>if(ISCHANGED(Active__c)&amp;&amp;  ISPICKVAL(Active__c, &apos;Yes&apos;)&amp;&amp; !$Permission.Account_Admin,true,false)</errorConditionFormula>
+    <errorMessage>You don&apos;t have Account admin permission</errorMessage>
+</ValidationRule>
